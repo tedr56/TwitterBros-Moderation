@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HelpDialog</class>
+ <widget class="QDialog" name="HelpDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>487</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#4225f6;&quot;&gt;Twitter Moderator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Setup&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Authoriser l'application avec son compte Twitter&lt;br/&gt;- Rentrer l'adresse de l'application d'affichage dans les options.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/settings/security&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#000000;&quot;&gt;Utilisation&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/settings/security&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;- Clique pour voir le Tweet dans le dock amovible&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/settings/security&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;- Double Clique pour valider&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/settings/security&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;- Clique Droit pour jeter le Tweet&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/settings/security&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#000000;&quot;&gt;Temporisation&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/settings/security&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Validation automatique après le temps fixer par le curseur.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/settings/security&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Pour activer la Validation automatique, cliquer sur &amp;quot;Automatic Validation&amp;quot;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/settings/security&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Pour réinitialiser le compte a rebours des Tweets, cliquer sur &amp;quot;Reset Tempo&amp;quot;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
