@@ -4,8 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network script webkitwidgets
-
+QT       += core gui network webview
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = TwitterModeration
