@@ -11,6 +11,7 @@
 #include <QHostAddress>
 #include "twitterwalldialog.h"
 
+#include <QWebEngineView>
 
 //TODO : remove qDebug messages
 
@@ -24,7 +25,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->TwitterSearch->setText(settings.value("hashtag", "#Twitter").toString());
     connect(ui->TwitterSearchButton, SIGNAL(clicked()), this, SLOT(applySearch()));
 
+
     //WebView Dock
+    webView = new QWebEngineView(ui->dockWidgetContents);
+    ui->dockWidgetContents->layout()->addWidget(webView);
+    webView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     connect(ui->actionShow_Content_Panel, SIGNAL(triggered(bool)), ui->dockWidget, SLOT(setVisible(bool)));
     connect(ui->dockWidget, SIGNAL(visibilityChanged(bool)), ui->actionShow_Content_Panel, SLOT(setChecked(bool)));
 
@@ -80,8 +85,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->TwitterFeed->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(selectionCell(QItemSelection,QItemSelection)));
 
     //QWebView
-    ui->webView->page()->setLinkDelegationPolicy(QWebPage::DelegateAllLinks);
-    connect(ui->webView, SIGNAL(linkClicked(QUrl)), this, SLOT(selectionCellUrl(QUrl)));
+    //webView->page()->setLinkDelegationPolicy(QWebPage::DelegateAllLinks);
+    connect(webView, SIGNAL(linkClicked(QUrl)), this, SLOT(selectionCellUrl(QUrl)));
     connect(ui->ResetTweetView, SIGNAL(clicked()), this, SLOT(selectionCell()));
 
     //Help Dialog
@@ -306,7 +311,7 @@ void MainWindow::selectionCell(QModelIndex index)
     QString screenName = JsonParser(JsonDoc).parseJson("user/screen_name");
     QString tweetId    = JsonParser(JsonDoc).parseJson("id_str");
     QUrl TweetUrl = QUrl("https://twitter.com/" + screenName + "/status/" + tweetId);
-    ui->webView->setUrl(TweetUrl);
+    webView->setUrl(TweetUrl);
 
     return;
 }
@@ -323,7 +328,7 @@ void MainWindow::selectionCell(QItemSelection selected, QItemSelection deselecte
 void MainWindow::selectionCellUrl(QUrl url)
 {
     qDebug() << url;
-    ui->webView->setUrl(url);
+    webView->setUrl(url);
 }
 
 void MainWindow::openHelp()

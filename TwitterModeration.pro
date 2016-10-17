@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network webview
+QT       += core gui network webview webenginewidgets script
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = TwitterModeration

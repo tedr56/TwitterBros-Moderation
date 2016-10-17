@@ -13,6 +13,7 @@
 #include <QSettings>
 #include <QTcpSocket>
 #include <QItemSelection>
+#include <QWebEngineView>
 
 namespace Ui {
 class MainWindow;
@@ -75,6 +76,7 @@ private:
     TwitterModerationModel* TwitterModel;
     ProgressDelegate* progressDelegate;
 
+    QWebEngineView *webView;
 
     QFile* LogFile;
     QSettings settings;

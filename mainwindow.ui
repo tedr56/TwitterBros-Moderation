@@ -98,7 +98,7 @@
      <x>0</x>
      <y>0</y>
      <width>1079</width>
-     <height>27</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuOptions">
@@ -136,7 +136,7 @@
     <number>2</number>
    </attribute>
    <widget class="QWidget" name="dockWidgetContents">
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <property name="topMargin">
@@ -144,6 +144,18 @@
        </property>
        <item>
         <widget class="QPushButton" name="ResetTweetView">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="text">
           <string>Return to Tweet</string>
          </property>
@@ -163,15 +175,6 @@
         </spacer>
        </item>
       </layout>
-     </item>
-     <item>
-      <widget class="QWebView" name="webView">
-       <property name="url">
-        <url>
-         <string>about:blank</string>
-        </url>
-       </property>
-      </widget>
      </item>
     </layout>
    </widget>
@@ -217,13 +220,6 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <customwidgets>
-  <customwidget>
-   <class>QWebView</class>
-   <extends>QWidget</extends>
-   <header>QtWebKitWidgets/QWebView</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections>
   <connection>
